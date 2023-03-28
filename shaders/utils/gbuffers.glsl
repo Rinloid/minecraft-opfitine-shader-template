@@ -80,6 +80,7 @@
 	}
 #endif /* defined GBUFFERS_FSH */
 
+#if defined GBUFFERS_VSH
 #	if defined GBUFFERS_LINE
 		const float LINE_WIDTH  = 4.0;
 		const float VIEW_SHRINK = 0.9609375 /* 1.0 - (1.0 / 256.0) */ ;
@@ -92,8 +93,6 @@
 		
 		uniform float viewHeight, viewWidth;
 #	endif
-
-#if defined GBUFFERS_VSH
 	uniform mat4 modelViewMatrix;
 	uniform mat4 projectionMatrix;
 #	if defined USE_TEXTURES
