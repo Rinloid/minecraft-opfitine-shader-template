@@ -129,7 +129,7 @@
 		uv0 = (textureMatrix * vec4(vaUV0, 0.0, 1.0)).xy;
 #	endif
 #	if defined USE_LIGHTMAP
-		uv1 = vaUV2 * 0.00390625 /* (1.0 / 256.0) */ + 0.03125 /* (1.0 / 32.0) */ ;
+		uv1 = clamp(vaUV2 / 256.0, vec2(0.03125 /* 0.5 / 16.0 */ ), vec2(0.96875 /* 15.5 / 16.0 */ ));
 #	endif
 	col = vaColor;
 
