@@ -82,7 +82,7 @@
 
 #if defined GBUFFERS_VSH
 #	if defined GBUFFERS_LINE
-		const float LINE_WIDTH  = 4.0;
+		const float LINE_WIDTH  = 2.0;
 		const float VIEW_SHRINK = 0.9609375 /* 1.0 - (1.0 / 256.0) */ ;
 		const mat4 VIEW_SCALE   = mat4(
 			VIEW_SHRINK, 0.0, 0.0, 0.0,
